@@ -1,0 +1,288 @@
+:root{
+  --bg1:#071011;
+  --bg2:#071717;
+  --muted:#9aa3a6;
+  --accent:#1180e6;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  font-family:Inter,Segoe UI,Roboto,Arial;
+  background:linear-gradient(90deg,var(--bg1),var(--bg2));
+  color:#d7e0e3;
+}
+a{text-decoration:none;color:inherit}
+
+/* NAVBAR */
+header{
+  position:fixed;top:0;left:0;right:0;
+  background:rgba(0,0,0,0.3);
+  backdrop-filter:blur(6px);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 24px;z-index:1000;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+.brand{display:flex;align-items:center;gap:10px;}
+.logo{width:40px;height:40px;border-radius:8px;
+  background:linear-gradient(135deg,var(--accent),#0ad);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;color:#021;
+}
+.nav-links{display:flex;gap:20px;}
+.nav-links a{color:var(--muted);font-weight:500;padding:6px 10px;}
+.nav-links a.active, .nav-links a:hover{color:white;border-bottom:2px solid var(--accent);}
+.btn-resume{background:var(--accent);padding:8px 14px;border-radius:8px;color:#021;font-weight:600;}
+
+/* SECTION CONTROL */
+.section{max-width:1200px;margin:120px auto 60px;padding:0 20px;display:none;}
+.section.active{display:block;}
+
+/* HOME LAYOUT */
+.home-container{
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:40px;min-height:60vh;
+}
+.home-left{flex:1;display:flex;justify-content:center;}
+.profile-pic{
+  width:300px;height:300px;border-radius:50%;
+  border:8px solid rgba(17,128,230,0.2);
+  box-shadow:0 10px 40px rgba(0,0,0,0.5);
+  object-fit:cover;
+}
+.home-right{flex:1;min-width:320px;display:flex;flex-direction:column;justify-content:center;}
+.home-right h1{font-size:38px;margin-bottom:8px;}
+.accent{color:var(--accent);}
+.typed-text{color:var(--muted);font-size:18px;margin-bottom:24px;min-height:24px;}
+
+/* Horizontal roles */
+.roles-horizontal{
+  display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px;
+}
+.role-box{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.1);
+  padding:10px 14px;border-radius:8px;
+  font-size:14px;color:#b5c2c5;white-space:nowrap;
+}
+
+/* Info boxes horizontally */
+.info-horizontal{
+  display:flex;flex-wrap:wrap;gap:14px;margin-bottom:40px;
+}
+.info-box{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:10px;padding:14px 18px;
+  color:var(--muted);font-size:15px;min-width:180px;
+  box-shadow:0 4px 14px rgba(0,0,0,0.3);
+}
+
+/* Connect section at bottom */
+.connect-section{
+  margin-top:auto;
+}
+.connect-section h3{margin-bottom:12px;}
+.connect-links{
+  list-style:none;display:flex;flex-wrap:wrap;gap:14px;
+}
+.connect-links a{
+  color:var(--accent);
+  background:rgba(255,255,255,0.05);
+  padding:8px 14px;border-radius:8px;
+  font-size:14px;border:1px solid rgba(255,255,255,0.1);
+}
+
+/* PROJECTS */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;}
+.project-card{
+  background:rgba(255,255,255,0.02);
+  border-radius:12px;padding:16px;
+  box-shadow:0 6px 24px rgba(0,0,0,0.3);
+  opacity: 0;
+  transform: translateY(20px);
+  animation-fill-mode: forwards;
+  animation-name: fadeInUp;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+.project-card img{width:100%;height:180px;object-fit:cover;border-radius:8px;}
+.project-card h3{margin-top:10px;color:var(--accent);}
+.project-card p{color:var(--muted);font-size:14px;margin:6px 0;}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;}
+.tags span{background:rgba(255,255,255,0.05);padding:4px 10px;border-radius:10px;font-size:13px;color:var(--muted);}
+
+/* stagger animation delay for projects */
+.project-card:nth-child(1) { animation-delay: 0.2s;}
+.project-card:nth-child(2) { animation-delay: 0.4s;}
+.project-card:nth-child(3) { animation-delay: 0.6s;}
+.project-card:nth-child(4) { animation-delay: 0.8s;}
+.project-card:nth-child(5) { animation-delay: 1.0s;}
+.project-card:nth-child(6) { animation-delay: 1.2s;}
+.project-card:nth-child(7) { animation-delay: 1.4s;}
+.project-card:nth-child(8) { animation-delay: 1.6s;}
+.project-card:nth-child(9) { animation-delay: 1.8s;}
+.project-card:nth-child(10) { animation-delay: 2.0s;}
+/* add more if you have more project cards */
+.internship-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation-fill-mode: forwards;
+  animation-name: fadeInUp;
+  animation-duration: 0.1s; /* faster for internships */
+  animation-timing-function: ease-out;
+}
+
+.internship-card:nth-child(1) { animation-delay: 0.05s; }
+.internship-card:nth-child(2) { animation-delay: 0.1s; }
+.internship-card:nth-child(3) { animation-delay: 0.15s; }
+/* and so on */
+.profile-pic {
+  width: 300px;         /* set your circle size */
+  height: 300px;
+  border-radius: 50%;
+  border: 8px solid rgba(17,128,230,0.2);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  object-fit: cover;      /* ensures face fills circle */
+  object-position: 60% 10%;  /* <--- adjust as needed */
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SKILLS BUBBLES */
+.skills-bubbles {
+  width: 100%;
+  max-width: 1000px;
+  height: 500px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(17, 128, 230, 0.2);
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+.bubble {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(17, 128, 230, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  animation: vibrate 2.5s ease-in-out infinite;
+}
+.bubble:hover {
+  transform: scale(1.1);
+}
+.bubble img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 4px;
+  animation: glow-blue 2.5s ease-in-out infinite;
+}
+.bubble span {
+  font-size: 10px;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* Glow animation on skill logos */
+@keyframes glow-blue {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px #1180e6) drop-shadow(0 0 10px #1180e6);
+  }
+  50% {
+    filter: drop-shadow(0 0 15px #52a8ff) drop-shadow(0 0 20px #52a8ff);
+  }
+}
+
+/* Vibration animation */
+@keyframes vibrate {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(2px, -2px); }
+  50% { transform: translate(-2px, 2px); }
+  75% { transform: translate(2px, 2px); }
+}
+.bubble:nth-child(2n) { animation-delay: 0.5s; }
+.bubble:nth-child(3n) { animation-delay: 1s; }
+.bubble:nth-child(4n) { animation-delay: 1.5s; }
+
+@media (max-width: 768px) {
+  .skills-bubbles {
+    height: 400px;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+  .bubble { width: 60px; height: 60px; font-size: 20px; }
+  .bubble img { width: 24px; height: 24px; }
+  .bubble span { font-size: 8px; }
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:40px 0;
+  color:var(--muted);
+  border-top:1px solid rgba(255,255,255,0.05);
+}
+
+/* Code button in project cards */
+.code-btn{
+  display:inline-block;
+  margin-top:10px;
+  background:var(--accent);
+  color:#021;
+  font-weight:600;
+  padding:8px 14px;
+  border-radius:8px;
+  transition:0.2s;
+}
+.code-btn:hover{
+  background:#0ad;
+  transform:translateY(-2px);
+}
+
+/* EDUCATION */
+.education-details {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+.education-card {
+  background:rgba(255,255,255,0.04);
+  border-radius:10px;
+  padding:30px 25px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.1);
+  width: 350px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  line-height: 1.5;
+}
+.education-card img {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}

@@ -1,0 +1,466 @@
+Certainly! Below is the **full complete code** for your portfolio with the following features as requested:
+
+- Skills logos glow with blue animation.
+- Projects appear one-by-one with smooth fade-up animation.
+- Education section boxes with images on top and text below, bigger boxes for neat text.
+- Full HTML and CSS integrated, no parts skipped.
+
+***
+
+## index.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sarthak Pandit — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <div class="brand">
+      <div class="logo">SP</div>
+      <div>
+        <div><b>Sarthak Pandit</b></div>
+        <div style="font-size:12px;color:#9aa3a6;">Portfolio</div>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="#" class="nav-link active" data-target="home">Home</a>
+      <a href="#" class="nav-link" data-target="projects">Projects</a>
+      <a href="#" class="nav-link" data-target="skills">Skills</a>
+      <a href="#" class="nav-link" data-target="education">Education</a>
+      <a href="#" class="nav-link" data-target="internships">Internships</a>
+      <a href="#" class="nav-link" data-target="certificates">Certificates</a>
+      <a href="#" class="nav-link" data-target="contact">Contact</a>
+      <a href="assets/Resume.pdf" class="btn-resume" target="_blank">Resume</a>
+    </nav>
+  </header>
+
+  <!-- HOME SECTION -->
+  <section id="home" class="section active">
+    <div class="home-container">
+      <div class="home-left">
+        <img src="assets/profile.jpg" alt="Sarthak Pandit" class="profile-pic" />
+      </div>
+
+      <div class="home-right">
+        <h1>Hi, I’m <span class="accent">Sarthak Pandit</span></h1>
+        <p class="typed-text"></p>
+
+        <!-- Roles in horizontal boxes -->
+        <div class="roles-horizontal">
+          <div class="role-box">AI Enthusiast</div>
+          <div class="role-box">Machine Learning Engineer</div>
+          <div class="role-box">Deep Learning Expert</div>
+          <div class="role-box">Computer Vision Researcher</div>
+          <div class="role-box">Developer</div>
+        </div>
+
+        <!-- Info boxes in horizontal row -->
+        <div class="info-horizontal">
+          <div class="info-box">
+            <p>📍 <b>Location</b><br>Indore, MP, India</p>
+          </div>
+          <div class="info-box">
+            <p>💼 <b>Expertise</b><br>AI/ML, Problem Solving</p>
+          </div>
+          <div class="info-box">
+            <p>📧 <b>Contact</b><br>sarthakpandit2005@gmail.com</p>
+          </div>
+        </div>
+
+        <!-- Connect links -->
+        <div class="connect-section">
+          <h3>Connect</h3>
+          <ul class="connect-links">
+            <li><a href="https://github.com/sarthakpdt" target="_blank">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/sarthak-pandit-88307529b/" target="_blank">LinkedIn</a></li>
+            <li><a href="mailto:sarthakpandit2005@gmail.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <h2>🚀 Projects</h2>
+    <div class="grid projects-grid">
+
+      <div class="project-card">
+        <img src="assets/stroke.jpg" alt="">
+        <h3>Stroke Prediction (ML)</h3>
+        <p>Predict stroke occurrence using multiple machine learning models on health data</p>
+        <div class="tags"><span>Python</span><span>Scikit-learn</span><span>EDA</span></div>
+        <a href="https://github.com/sarthakpdt/Stroke-Prediction-ML" target="_blank" class="code-btn">Code</a>
+        <a href="https://siddharthranka-sr.github.io/project-page/" target="_blank" class="code-btn">Project Page</a>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/stegno.jpg" alt="">
+        <h3>Steganography (Deep Learning)</h3>
+        <p>This project implements an Image Steganography System that allows you to hide a secret text message inside an image using the Least Significant Bit (LSB) modification technique on RGB pixels. The main goal is to securely embed text inside images while keeping the image visually unchanged</p>
+        <div class="tags"><span>PyTorch</span><span>CNN</span><span>Image Processing</span></div>
+        <a href="https://github.com/sarthakpdt/Steganography-Python-ML" target="_blank" class="code-btn">Code</a>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/opti.jpg" alt="">
+        <h3>Hospital Resource Allocation Optimization using Linear Programming</h3>
+        <p>This project focuses on optimizing hospital resource allocation using Linear Programming (LPP) techniques. The study applies the Simplex Method through TORA software to allocate limited hospital resources — nurses, beds, medical equipment, and doctor-hours — efficiently across 15 departments in a government hospital in Karnataka, India.</p>
+        <div class="tags"><span>Python</span><span>OpenCV</span><span>OPtimization for Computer Science</span></div>
+        <a href="https://github.com/sarthakpdt/Optimization-for-Computer-Science-Project-5-Sem" target="_blank" class="code-btn">Code</a>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/face.jpg" alt="">
+        <h3>Python Face Detection System</h3>
+        <p>Live face detection and recognition using OpenCV and Haar Cascade Classifiers.</p>
+        <div class="tags"><span>Python</span><span>OpenCV</span><span>Computer Vision</span></div>
+        <a href="https://github.com/sarthakpdt/Python-Face-Detection-System" target="_blank" class="code-btn">Code</a>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/se.png" alt="">
+        <h3>Multimodal Authentication System</h3>
+        <p>Protect the data of the user by various Multimodal Authentication System such as Fingerprint, Facecam, username and password.</p>
+        <div class="tags"><span>Python</span><span>Flask</span><span>AI/ML</span></div>
+        <a href="https://github.com/sarthakpdt/Multimodal-Authentication-System-Software-Engineering-" target="_blank" class="code-btn">Code</a>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/leaf.jpg" alt="">
+        <h3>Leaf Classification (ML)</h3>
+        <p>Classifies plant species based on leaf shape using CNN and Transfer Learning models.</p>
+        <div class="tags"><span>TensorFlow</span><span>CNN</span><span>Transfer Learning</span></div>
+        <a href="https://github.com/sarthakpdt/Leaf-Classification-ML" target="_blank" class="code-btn">Code</a>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/house.jpg" alt="">
+        <h3>House Price Prediction System (ML)</h3>
+        <p>Predicts real estate prices using multiple regression and ensemble learning models.</p>
+        <div class="tags"><span>Python</span><span>Regression</span><span>Data Science</span></div>
+        <a href="https://github.com/sarthakpdt/House-Price-Prediction-System-Using-ML-" target="_blank" class="code-btn">Code</a>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/dbms.jpg" alt="">
+        <h3>Hostel Management System (DBMS)</h3>
+        <p>Role-based web app for managing hostel operations, built with Node.js & MySQL.</p>
+        <div class="tags"><span>Node.js</span><span>Express</span><span>MySQL</span></div>
+        <a href="https://github.com/sarthakpdt/Hostel-Management-System-DBMS" target="_blank" class="code-btn">Code</a>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/fake.jpg" alt="">
+        <h3>Fake News Detection (ML)</h3>
+        <p>A Fake News Detection System that classifies news articles as Fake or Real using machine learning. This project leverages Natural Language Processing (NLP) techniques and multiple machine learning algorithms to analyze textual content and detect misinformation automatically.</p>
+        <div class="tags"><span>Python</span><span>NLP</span><span>Scikit-learn</span></div>
+        <a href="https://github.com/sarthakpdt/Fake-news-detection-ML" target="_blank" class="code-btn">Code</a>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/cap.jpg" alt="">
+        <h3>Capstone Project (ML Internship)</h3>
+        <p>The goal of the project was to build a salary prediction model that ensures fairness and removes discrimination in salary decisions. By analyzing historical applicant data, the system predicts the Expected CTC (Cost to Company) of new employees, helping the HR department make unbiased, data-driven decisions</p>
+        <div class="tags"><span>Python</span><span>NLP</span><span>Scikit-learn</span></div>
+        <a href="https://github.com/sarthakpdt/Capstone-Project-ML-Internship" target="_blank" class="code-btn">Code</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <h2>🛠 Skills</h2>
+    <div class="skills-bubbles">
+      <div class="bubble" data-skill="Python">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+        <span>Python</span>
+      </div>
+      <div class="bubble" data-skill="C/C++">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C/C++" />
+        <span>C/C++</span>
+      </div>
+      <div class="bubble" data-skill="Java">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
+        <span>Java</span>
+      </div>
+      <div class="bubble" data-skill="SQL">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" />
+        <span>SQL</span>
+      </div>
+      <div class="bubble" data-skill="JavaScript">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+        <span>JavaScript</span>
+      </div>
+      <div class="bubble" data-skill="NumPy">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" />
+        <span>NumPy</span>
+      </div>
+      <div class="bubble" data-skill="Pandas">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" />
+        <span>Pandas</span>
+      </div>
+      <div class="bubble" data-skill="Scikit-learn">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" alt="Scikit-learn" />
+        <span>Scikit-learn</span>
+      </div>
+      <div class="bubble" data-skill="TensorFlow">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" />
+        <span>TensorFlow</span>
+      </div>
+      <div class="bubble" data-skill="OpenCV">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="OpenCV" />
+        <span>OpenCV</span>
+      </div>
+      <div class="bubble" data-skill="HTML">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
+        <span>HTML</span>
+      </div>
+      <div class="bubble" data-skill="CSS">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
+        <span>CSS</span>
+      </div>
+      <div class="bubble" data-skill="JS">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS" />
+        <span>JS</span>
+      </div>
+      <div class="bubble" data-skill="Node.js">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" />
+        <span>Node.js</span>
+      </div>
+      <div class="bubble" data-skill="Express">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" />
+        <span>Express</span>
+      </div>
+      <div class="bubble" data-skill="MySQL">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
+        <span>MySQL</span>
+      </div>
+      <div class="bubble" data-skill="DSA">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="DSA" />
+        <span>DSA</span>
+      </div>
+      <div class="bubble" data-skill="OOPs">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="OOPs" />
+        <span>OOPs</span>
+      </div>
+      <div class="bubble" data-skill="Competitive Programming">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="Competitive Programming" />
+        <span>Competitive Programming</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="section">
+    <h2>🎓 Education</h2>
+    <div class="education-details" style="margin-top: 25px; display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+
+      <div class="education-card" style="background:rgba(255,255,255,0.04); border-radius:10px; padding:30px 25px; box-shadow:0 2px 10px rgba(0,0,0,0.1); width: 350px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 20px; line-height: 1.5;">
+        <a href="https://www.jklu.edu.in/" target="_blank" title="JK Lakshmipat University">
+          <img src="https://images.shiksha.com/mediadata/images/articles/1667394069phpaz7D10.jpeg" alt="JKLU Logo" style="width: 180px; height: 120px; object-fit: cover; border-radius: 8px;" />
+        </a>
+        <div>
+          <h3>B.Tech in Computer Science & Engineering</h3>
+          <p><b>Institute</b>: JK Lakshmipat University (2023–2027)</p>
+          <p>Learning core computer science concepts, programming, machine learning, optimization theory, discrete mathematics, and web development.</p>
+        </div>
+      </div>
+
+      <div class="education-card" style="background:rgba(255,255,255,0.04); border-radius:10px; padding:30px 25px; box-shadow:0 2px 10px rgba(0,0,0,0.1); width: 350px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 20px; line-height: 1.5;">
+        <a href="https://www.iitj.ac.in/main/en/iitj" target="_blank" title="IIT Jodhpur">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ40DesC-j0TAV5pAkFXYvoaRjY1k49s1_2_Q&s" alt="IIT Jodhpur Logo" style="width: 180px; height: 120px; object-fit: cover; border-radius: 8px;"/>
+        </a>
+        <div>
+          <h3>B.Tech in Computer Science & Engineering</h3>
+          <p><b>Institute</b>: IIT Jodhpur (2025)</p>
+          <p>V Scholar at IIT Jodhpur. Part of Sem Exchange Program. Did 4th Semester OF Btech from IIT Jodhpur. Made many Projects.</p>
+        </div>
+      </div>
+
+      <div class="education-card" style="background:rgba(255,255,255,0.04); border-radius:10px; padding:30px 25px; box-shadow:0 2px 10px rgba(0,0,0,0.1); width: 350px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 20px; line-height: 1.5;">
+        <a href="https://ryaninternational.org/" target="_blank" title="Ryan International School">
+          <img src="https://images.uniapply.com/uploads/college/image/500/4610/webp/Building_210209_180522.webp" alt="Ryan International School Logo" style="width: 180px; height: 120px; object-fit: cover; border-radius: 8px;" />
+        </a>
+        <div>
+          <h3>Schooling</h3>
+          <p><b>Institution</b>: Ryan International School (2011–2023)</p>
+          <p>Focused on Physics, Chemistry, Mathematics and groundwork for Computer Science.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERNHSIPS  -->
+  <section id="internships" class="section">
+    <h2>🚀 Internships</h2>
+    <div class="grid projects-grid">
+
+      <div class="project-card">
+        <img src="https://www.collegetips.in/images/header-image-1.jpg" alt="">
+        <h3>CollegeTips.in</h3>
+        <p>Field: Artificial Intelligence and Machine Learning</p>
+        <p>Duration: 1 Month</p>
+        <p>Stipend: 10,000/Month</p>
+        <p>Done individual tasks of artificial Intelligence and Machine Learning which helped to grab more knowledge and skills</p>
+        <div class="tags"><span>Python</span><span>Scikit-learn</span></div>
+        <a href="https://onedrive.live.com/?cid=062fe4f107ae7f5b&id=062FE4F107AE7F5B%21sbca695b2ac694392a9cbd5b758e2a68c&resid=062FE4F107AE7F5B%21sbca695b2ac694392a9cbd5b758e2a68c&ithint=file%2Cpdf&e=XjOVOy&migratedtospo=true&redeem=aHR0cHM6Ly8xZHJ2Lm1zL2IvYy8wNjJmZTRmMTA3YWU3ZjViL0ViS1ZwcnhwckpKRHFjdlZ0MWppcG93Qk1TdzVXcDBPRFpYTkg5RjRKMUNQdGc_ZT1Yak9WT3k&v=validatepermission" target="_blank" class="code-btn">Certificate Link</a>
+      </div>
+
+      <div class="project-card">
+        <img src="https://dme2wmiz2suov.cloudfront.net/Institution(7422)/Logo/3806902-logo_LED_CA-05.png" alt="">
+        <h3>Launched Global</h3>
+        <p>Field: Artificial Intelligence and Machine Learning</p>
+        <p>Duration: 2 Month</p>
+        <p>Stipend: 15,000/Month</p>
+        <p>Made a machine learning based salary prediction system that uses applicant data to automatically predict fair and unbiased salary offers. This reduces human judgment and ensures consistency in HR decision making</p>
+        <p>Reward and Recognition: Selected among the Top 20 project creators across IITs, NITs, and IIITs during this internship ; awarded a Tablet and a 2 month AI internship extension at Unlox Company. Recognized by JK Lakshmipat University’s official LinkedIn page for outstanding performance and innovation in the field of Artificial Intelligence<p>
+        <div class="tags"><span>Python</span><span>Scikit-learn</span><span>Machine Learning</span></div>
+        <a href="https://onedrive.live.com/?cid=062fe4f107ae7f5b&id=062FE4F107AE7F5B%21seb3efea120fa45c08c8b3fbd85cfb525&resid=062FE4F107AE7F5B%21seb3efea120fa45c08c8b3fbd85cfb525&ithint=file%2Cpdf&e=GtadkB&migratedtospo=true&redeem=aHR0cHM6Ly8xZHJ2Lm1zL2IvYy8wNjJmZTRmMTA3YWU3ZjViL0VhSC1QdXY2SU1CRmpJc192WVhQdFNVQlV4Tm1IY0gtNWN5cUY2dHB0V3MyQmc_ZT1HdGFka0I&v=validatepermission" target="_blank" class="code-btn">Certificate Link</a>
+        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7382002369292636160/" target="_blank" class="code-btn">Link to official Linked Page of JK Lakshmipat University</a>
+      </div>
+
+      <div class="project-card">
+        <img src="https://media.assettype.com/freepressjournal/2024-10-17/shobbvau/image2-1.jpeg" alt="">
+        <h3>Suvidha Foundations</h3>
+        <p>Field: Artificial Intelligence and Machine Learning</p>
+        <p>Duration: 2 Month</p>
+        <p>Stipend: Unpaid</p>
+        <p>Did a research Internship in Machine Learning focused on cross linguistic pragmatics, developing computational models to analyze features like politeness, irony and stance in multilingual news corpora using AI evaluation and benchmarking techniques</p>
+        <div class="tags"><span>Python</span><span>Machine Learning</span></div>
+        <a href="https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2IvYy8wNjJmZTRmMTA3YWU3ZjViL0VVdWJ0MlhBV29SRWpaSmw1V2MtU0p3Qm5XMEV2NkVtMmZDZFFhcnZ5Mm82c3c%5FZT1iWDBBQTM&cid=062FE4F107AE7F5B&id=62FE4F107AE7F5B%21s65b79b4b5ac044848d9265e5673e489c&parId=62FE4F107AE7F5B%21scbb7312b58fb4b8f9ae1886fed2a5a43&o=OneUp" target="_blank" class="code-btn">Certificate Link</a>
+      </div>
+      <div class="project-card">
+        <img src="https://www.unlox.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fabtusbg.b487744c.png&w=3840&q=75" alt="">
+        <h3>Unlox Comany</h3>
+        <p>Field: Artificial Intelligence andMachine Learning</p>
+        <p>Duration: 2 Month</p>
+        <p>Stipend: 15,000/Month</p>
+        <p>To be Assigned</p>
+        <div class="tags"><span>Python</span><span>Scikit-learn</span><span>Machine Learning</span></div>
+        <a href="" target="_blank" class="code-btn">Certificate Link</a>
+      </div>
+      <div class="project-card">
+        <img src="https://blogs.nvidia.com/wp-content/uploads/2024/04/nvidiaheadquarters.jpg" alt="">
+        <h3>Interwave Company/Nvidia</h3>
+        <p>Field: Advanced Machine Learning</p>
+        <p>Duration: 2 Month</p>
+        <p>Stipend: UnPaid</p>
+        <p>To be Assigned</p>
+        <div class="tags"><span>Python</span><span>Scikit-learn</span><span>Machine Learning</span></div>
+        <a href="" target="_blank" class="code-btn">Certificate Link</a>
+      </div>
+
+      <div class="project-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtI2Fa9TazZjAE0GSaXhyktDkTv8B26Giv5A&s" alt="">
+        <h3>Launched Global/Microsoft</h3>
+        <p>Field: Artificial Intelligence and Machine Learning</p>
+        <p>Duration: 2 Month</p>
+        <p>Stipend: 17,000/Month</p>
+        <p>To be Assigned</p>
+        <div class="tags"><span>Python</span><span>Scikit-learn</span><span>Machine Learning</span></div>
+        <a href="" target="_blank" class="code-btn">Certificate Link</a>
+      </div>    
+    </div>
+  </section>
+<section id="certificates" class="section">
+  <h2>🎖 Certificates</h2>
+  <div class="grid projects-grid">
+
+    <div class="project-card">
+      <h3>Udemy DSA in Java Certificate</h3>
+      <a href="https://onedrive.live.com/?id=062FE4F107AE7F5B%21sc8601f56e01e4660a1196a2d9c0fa9dd&cid=062fe4f107ae7f5b&ithint=file%2Cpdf&redeem=aHR0cHM6Ly8xZHJ2Lm1zL2IvYy8wNjJmZTRmMTA3YWU3ZjViL0VWWWZZTWdlNEdCR29SbHFMWndQcWQwQkZOLXFCR211WE9sd0xvRnZ1cnVDWnc_ZT1jdG5STjk&parId=62FE4F107AE7F5B%21scbb7312b58fb4b8f9ae1886fed2a5a43&o=OneUp" target="_blank" class="code-btn">View Certificate</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Coursera Python Certificate</h3>
+      <a href="https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2IvYy8wNjJmZTRmMTA3YWU3ZjViL0VhMGFKdUdqSEFCSmtZMFdzVFkzWjZZQjRkZUJfQlJ0VnJyOG0tRVRuTEhEa1E%5FZT1zSEo3Zkg&cid=062FE4F107AE7F5B&id=62FE4F107AE7F5B%21se1261aad1ca34900918d16b1363767a6&parId=62FE4F107AE7F5B%21scbb7312b58fb4b8f9ae1886fed2a5a43&o=OneUp" target="_blank" class="code-btn">View Certificate</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Great Learning Java Programming Certificate</h3>
+      <a href="https://onedrive.live.com/?id=062FE4F107AE7F5B%21s9d374a6a19e24a89bd96253063500d8d&cid=062fe4f107ae7f5b&ithint=file%2Cpdf&redeem=aHR0cHM6Ly8xZHJ2Lm1zL2IvYy8wNjJmZTRmMTA3YWU3ZjViL0VXcEtONTNpR1lsS3ZaWWxNR05RRFkwQkZiWmtLdkFTa3VYSlFYSk9DRzNrRnc_ZT1zSUVnaUg&parId=62FE4F107AE7F5B%21scbb7312b58fb4b8f9ae1886fed2a5a43&o=OneUp" target="_blank" class="code-btn">View Certificate</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Udemy C Certificate</h3>
+      <a href="https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2IvYy8wNjJmZTRmMTA3YWU3ZjViL0VSTW45SkFMSHlOTHBvRHlRZ3VUYWp3QnZSTVNhRjE3LTFwVk14NnEwYUhLQkE%5FZT1rdmVjUDk&cid=062FE4F107AE7F5B&id=62FE4F107AE7F5B%21s90f427131f0b4b23a680f2420b936a3c&parId=62FE4F107AE7F5B%21scbb7312b58fb4b8f9ae1886fed2a5a43&o=OneUp" target="_blank" class="code-btn">View Certificate</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Udemy DSA in C Certificate</h3>
+      <a href="https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2IvYy8wNjJmZTRmMTA3YWU3ZjViL0VabV95MTdiTjhaQWdiczduV05LMHpJQkxHVjBHQWE4ZHczdS1iOElpRFNpYUE%5FZT1kYzJ5bmc&cid=062FE4F107AE7F5B&id=62FE4F107AE7F5B%21s5ecbbf9937db40c681bb3b9d634ad332&parId=62FE4F107AE7F5B%21scbb7312b58fb4b8f9ae1886fed2a5a43&o=OneUp" target="_blank" class="code-btn">View Certificate</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Coursera C Certificate</h3>
+      <a href="https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2IvYy8wNjJmZTRmMTA3YWU3ZjViL0VlRnFjUmRXRnBGSG9hVXp4bWloZU9FQnJ5UDBFTEJaX1owZVBlLWw0R3dXWmc%5FZT01eDQ5WlQ&cid=062FE4F107AE7F5B&id=62FE4F107AE7F5B%21s17716ae116564791a1a533c668a178e1&parId=62FE4F107AE7F5B%21scbb7312b58fb4b8f9ae1886fed2a5a43&o=OneUp" target="_blank" class="code-btn">View Certificate</a>
+    </div>
+
+    <div class="project-card">
+      <h3>IIRS Outreach Program Course Certificate</h3>
+      <a href="https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2IvYy8wNjJmZTRmMTA3YWU3ZjViL0VSTFN3WUY0eU1GQ3JwM1RDQmVKNmRrQnNHUHRzZnBlSFBFNEJvYm9mcDRCZGc%5FZT1UQVBYeXQ&cid=062FE4F107AE7F5B&id=62FE4F107AE7F5B%21s81c1d212c87842c1ae9dd3081789e9d9&parId=62FE4F107AE7F5B%21scbb7312b58fb4b8f9ae1886fed2a5a43&o=OneUp" target="_blank" class="code-btn">View Certificate</a>
+    </div>
+
+    <div class="project-card">
+      <h3>MySQL Course Certificate</h3>
+      <a href="https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2IvYy8wNjJmZTRmMTA3YWU3ZjViL0VmX0t1WGFVaUxCUHBhR1l0cVlhRzE4QkdNUGx2YUdsSmJTUHFRcGdZTHFJY1E%5FZT13S3RqQ0E&cid=062FE4F107AE7F5B&id=62FE4F107AE7F5B%21s76b9caff88944fb0a5a198b6a61a1b5f&parId=62FE4F107AE7F5B%21scbb7312b58fb4b8f9ae1886fed2a5a43&o=OneUp" target="_blank" class="code-btn">View Certificate</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Java Assessment Certificate Course</h3>
+      <a href="https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2IvYy8wNjJmZTRmMTA3YWU3ZjViL0VWTG1fbWRyVzc1S3Itam40Z3RlLWNrQnJJZ0pUZWpUYzFCOHdBcUJSNTN2Smc%5FZT1oaTBkd0w&cid=062FE4F107AE7F5B&id=62FE4F107AE7F5B%21s67fee6525b6b4abeafe8e7e20b5ef9c9&parId=62FE4F107AE7F5B%21scbb7312b58fb4b8f9ae1886fed2a5a43&o=OneUp" target="_blank" class="code-btn">View Certificate</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Udemy HTML CSS JS Certificate</h3>
+      <a href="https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2IvYy8wNjJmZTRmMTA3YWU3ZjViL0VlX1lHamFNM2p4SW9WOTR1ZDBGNXJ3QjBKc0hKM1ZmRDRGYXdLVHIxYkJsUlE%5FZT11THlBZDg&cid=062FE4F107AE7F5B&id=62FE4F107AE7F5B%21s361ad8efde8c483ca15f78b9dd05e6bc&parId=62FE4F107AE7F5B%21scbb7312b58fb4b8f9ae1886fed2a5a43&o=OneUp" target="_blank" class="code-btn">View Certificate</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Geeks For Geeks Mastering Generative AI and ChatGPT Certificate</h3>
+      <a href="https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2IvYy8wNjJmZTRmMTA3YWU3ZjViL0VYSWM1QW1YNTJOQXMzODRPenZPNVdzQk5abnlBWTE2VHZjWkVhRDgwanlWd0E%5FZT16U1lzNVU&cid=062FE4F107AE7F5B&id=62FE4F107AE7F5B%21s09e41c72e7974063b37f383b3bcee56b&parId=62FE4F107AE7F5B%21scbb7312b58fb4b8f9ae1886fed2a5a43&o=OneUp" target="_blank" class="code-btn">View Certificate</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2>📬 Contact</h2>
+  <div class="contact-details" style="margin-top: 25px; display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+    
+    <div class="contact-box" style="background:rgba(255,255,255,0.04); border-radius:10px; padding:20px 30px; min-width: 280px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Gmail" style="width:40px; height:40px;">
+      <a href="mailto:sarthakpandit2005@gmail.com" style="color: var(--accent); text-decoration: none; font-size: 16px;">sarthakpandit2005@gmail.com</a>
+    </div>
+
+    <div class="contact-box" style="background:rgba(255,255,255,0.04); border-radius:10px; padding:20px 30px; min-width: 280px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="width:40px; height:40px;">
+      <a href="https://github.com/sarthakpdt" target="_blank" style="color: var(--accent); text-decoration: none; font-size: 16px;">github.com/sarthakpdt</a>
+    </div>
+
+    <div class="contact-box" style="background:rgba(255,255,255,0.04); border-radius:10px; padding:20px 30px; min-width: 280px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" style="width:40px; height:40px;">
+      <a href="https://www.linkedin.com/in/sarthak-pandit-88307529b/" target="_blank" style="color: var(--accent); text-decoration: none; font-size: 16px;">linkedin.com/in/sarthak-pandit-88307529b</a>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+  <footer>
+    © 2025 • Sarthak Pandit — Built with HTML, CSS & JS
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
